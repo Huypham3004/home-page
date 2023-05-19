@@ -1,0 +1,29 @@
+.container--portfolio {
+    // border: 1px solid red;
+}
+
+.row--portfolio-title {
+    display: flex;
+    justify-content: center;
+}
+
+.title-box--portfolio {
+    width: 85%;
+    padding-bottom: 70px;
+}
+
+.row--portfolio-image {
+    margin-bottom: 50px;
+}
+
+.portfolio-image-box__image {
+    width: 100%;
+    margin-bottom: 29px;
+}
+
+.portfolio-image-box__title {
+    font-size: 18px;
+    font-family: $fontPrimary;
+    letter-spacing: -1px;
+    color: #4F77FF;
+}

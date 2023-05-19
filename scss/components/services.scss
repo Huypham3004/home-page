@@ -1,0 +1,13 @@
+.services {
+    border: 1px solid red;
+}
+
+.container--services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-button {
+    margin-top: 70px;
+}

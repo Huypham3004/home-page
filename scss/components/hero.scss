@@ -1,0 +1,132 @@
+.hero {
+    background-color: $backgroundColor1;
+}
+
+.container--hero {
+    position: relative;
+    padding-top: 136px;
+    padding-bottom: 390px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content__title {
+    font-size: 72px;
+    font-family: $fontPrimary;
+    width: 40%;
+    text-align: center;
+    color: #2D3958;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.hero-content__description {
+    font-size: 18px;
+    width: 35%;
+    text-align: center;
+    letter-spacing: -0.3px;
+    padding: 39px 0 70px 0;
+}
+
+.hero-content__footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.play {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.play__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button__triangle {
+    width: 0px;
+    height: 0px;
+    border-bottom: 7.5px solid transparent;
+    border-top: 7.5px solid transparent;
+    border-left: 12px solid #4F77FF;
+}
+
+.play__text {
+    font-family: $fontPrimary;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2D3958;
+    letter-spacing: -0.3px;
+}
+
+.group {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    bottom: var(--bottom);
+    right: var(--right);
+}
+
+.group--reverse {
+    flex-direction: row-reverse;
+}
+
+.group__avatar {
+    height: var(--height);
+    width: var(--width);
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.group__avatar--right {
+    border-radius: 50% 50% 0 50%;
+}
+
+.group__avatar--left {
+    border-radius: 50% 50% 50% 0;
+}
+
+.shape-decor {
+    height: var(--height);
+    width: var(--width);
+    background-color: var(--bg-color);
+}
+
+.shape-decor--left {
+    border-radius: 50% 50% 50% 0;
+}
+
+.shape-decor--right {
+    border-radius: 50% 50% 0 50%;
+}
+
+@media (max-width: 991px) {
+    .images {
+        display: none;
+    }
+}

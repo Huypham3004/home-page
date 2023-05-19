@@ -1,0 +1,39 @@
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+    width: 65%;
+}
+
+.title-box--cta {
+    padding-bottom: 90px;
+    width: 100%;
+}
+
+.title-box__title {
+    font-family: $fontPrimary;
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.15;
+    color: #2D3958;
+    letter-spacing: -2px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.title-box__description {
+    font-size: 18px;
+    letter-spacing: -0.3px;
+}
+
+.title-box__description--cta {
+    font-size: 22px;
+    letter-spacing: -1px;
+    width: 80%;
+}
+
+.title-box__description--review {
+    font-size: 22px;
+    letter-spacing: -1px;
+}
