@@ -1,3 +1,15 @@
+.pt-120 {
+  padding-top: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+.pb-130 {
+  padding-bottom: 130px;
+}
+
 *,
 *:before,
 *:after {
@@ -34,43 +46,46 @@ h5,
 h6 {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  line-height: 1.4;
-  color: #111;
+  color: #2D3958;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 72px;
+  line-height: 1.08;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 48px;
+  line-height: 1.17;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 42px;
+  line-height: 1.19;
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 36px;
+  line-height: 1.28;
 }
 
 h5 {
   font-size: 22px;
+  line-height: 1.45;
 }
 
 h6 {
   font-size: 18px;
+  line-height: 1.56;
 }
 
 .page-section {
   width: 100%;
-  margin-top: 120px;
   position: relative;
 }
 
 .page-section--bg {
   background-color: #F7F5F1;
-  z-index: -2;
 }
 
 .page-section--bg-black {
@@ -109,6 +124,30 @@ h6 {
 .button--block {
   width: 100%;
   text-transform: uppercase;
+}
+
+.button-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-circle:hover {
+  box-shadow: 0px 5px 20px rgba(18, 2, 47, 0.15);
+}
+
+.button-circle__triangle {
+  width: 0px;
+  height: 0px;
+  border-bottom: 7.5px solid transparent;
+  border-top: 7.5px solid transparent;
+  border-left: 12px solid #4F77FF;
 }
 
 .header {
@@ -191,6 +230,7 @@ h6 {
   display: flex;
   gap: 30px;
   padding: 0 3px;
+  list-style: none;
 }
 
 .header-menu__item {
@@ -359,10 +399,7 @@ h6 {
   letter-spacing: -0.3px;
 }
 
-.group {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
+.image-item {
   position: absolute;
   top: var(--top);
   left: var(--left);
@@ -370,11 +407,7 @@ h6 {
   right: var(--right);
 }
 
-.group--reverse {
-  flex-direction: row-reverse;
-}
-
-.group__avatar {
+.hero-image {
   height: var(--height);
   width: var(--width);
   background-color: var(--bg-color);
@@ -384,26 +417,12 @@ h6 {
   overflow: hidden;
 }
 
-.group__avatar--right {
+.hero-image--bottom-right {
   border-radius: 50% 50% 0 50%;
 }
 
-.group__avatar--left {
+.hero-image--bottom-left {
   border-radius: 50% 50% 50% 0;
-}
-
-.shape-decor {
-  height: var(--height);
-  width: var(--width);
-  background-color: var(--bg-color);
-}
-
-.shape-decor--left {
-  border-radius: 50% 50% 50% 0;
-}
-
-.shape-decor--right {
-  border-radius: 50% 50% 0 50%;
 }
 
 @media (max-width: 991px) {
@@ -464,6 +483,12 @@ h6 {
   align-items: center;
   padding-bottom: 80px;
   width: 65%;
+  margin: auto;
+}
+
+.title-box--large {
+  width: 85%;
+  padding-bottom: 70px;
 }
 
 .title-box--cta {
@@ -515,6 +540,7 @@ h6 {
 .box-decor {
   position: relative;
   --position: calc((var(--size) + 10px) * -1);
+  width: var(--width);
 }
 .box-decor:after {
   content: "";
@@ -537,13 +563,13 @@ h6 {
 }
 
 .box-decor--top-left:after {
-  top: 0;
+  top: 30px;
   left: var(--position);
   border-radius: 50% 50% 0 50%;
 }
 
 .box-decor--top-right:after {
-  top: 0;
+  top: 30px;
   right: var(--position);
   border-radius: 50% 50% 50% 0;
 }
@@ -584,12 +610,12 @@ h6 {
   text-align: center;
 }
 
-.row--logo {
-  margin-top: 80px;
+.logo-group {
+  padding-top: 70px;
 }
 
-.row--items {
-  padding: 100px 65px;
+.items {
+  padding: 70px 65px 100px 65px;
   background-color: #F7F5F1;
   border-radius: 20px;
 }
@@ -656,7 +682,7 @@ h6 {
 }
 
 .gallery-text {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .right-content {
@@ -672,14 +698,14 @@ h6 {
   font-family: "Outfit", sans-serif;
   font-size: 42px;
   color: #2D3958;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   letter-spacing: -0.02em;
 }
 
 .gallery-text__description {
   font-size: 18px;
   letter-spacing: -0.3px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 .gallery-text__view {
@@ -689,12 +715,12 @@ h6 {
   text-transform: uppercase;
 }
 
-.gallery-arrows {
+.group-arrows {
   display: flex;
   gap: 15px;
 }
 
-.gallery-arrows__left {
+.arrow-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -705,15 +731,9 @@ h6 {
   border: 1px solid #E7E5EA;
 }
 
-.gallery-arrows__right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+.arrow-button:hover {
   box-shadow: 0px 20px 50px rgba(79, 119, 255, 0.2);
+  border: none;
 }
 
 .container--about {
@@ -721,7 +741,7 @@ h6 {
   padding: 110px 0 120px 0;
 }
 
-.row--about-title {
+.about-title {
   display: flex;
   justify-content: center;
 }
@@ -740,7 +760,7 @@ h6 {
 .about-box-text__small-text {
   font-size: 18px;
   color: #4F77FF;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .about-box-text__title {
@@ -749,12 +769,12 @@ h6 {
   font-weight: 500;
   letter-spacing: -1px;
   color: #2D3958;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .about-text-box__description {
   font-size: 18px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   letter-spacing: -0.3px;
 }
 
@@ -763,7 +783,7 @@ h6 {
   align-items: center;
   gap: 10px;
   text-transform: uppercase;
-  margin-bottom: 55px;
+  padding-bottom: 55px;
 }
 
 .about-text-box__indicator {
@@ -800,23 +820,13 @@ h6 {
   padding-left: 15px;
 }
 
-.row--portfolio-title {
-  display: flex;
-  justify-content: center;
-}
-
-.title-box--portfolio {
-  width: 85%;
-  padding-bottom: 70px;
-}
-
-.row--portfolio-image {
-  margin-bottom: 50px;
+.portfolio-image {
+  padding-bottom: 20px;
 }
 
 .portfolio-image-box__image {
   width: 100%;
-  margin-bottom: 29px;
+  padding-bottom: 29px;
 }
 
 .portfolio-image-box__title {
@@ -835,6 +845,7 @@ h6 {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding-bottom: 100px;
 }
 
 .choose-button {
@@ -870,10 +881,6 @@ h6 {
   border-radius: 5px;
 }
 
-.row--pricing {
-  margin-top: 100px;
-}
-
 .pricing-detail {
   display: flex;
   flex-direction: column;
@@ -881,6 +888,7 @@ h6 {
   border: 1px solid #E7E5EA;
   border-radius: 10px;
   background-color: #FFFFFF;
+  padding-top: 35px;
 }
 
 .pricing-detail__type {
@@ -888,6 +896,7 @@ h6 {
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   color: #4F77FF;
+  padding-bottom: 20px;
 }
 
 .pricing-detail__price {
@@ -895,38 +904,43 @@ h6 {
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   color: #2D3958;
+  padding-bottom: 10px;
 }
 .pricing-detail__price span {
   font-size: 64px;
 }
 
 .pricing-detail__description {
-  width: 56%;
+  width: 52%;
   text-align: center;
+  padding-bottom: 40px;
 }
 
-.pricing-detail__items {
+.list-item {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 40px;
+  list-style: none;
 }
 
-.item {
+.list-item__item {
   display: flex;
   align-items: center;
   gap: 13px;
 }
-
-.item__icon {
+.list-item__item:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
   width: 30px;
   height: 30px;
+  padding: 8px;
   border-radius: 50%;
+  background-color: rgb(237, 241, 255);
+  color: #4F77FF;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(237, 241, 255);
-  color: #4F77FF;
 }
 
 .pricing-detail__button {
@@ -934,7 +948,7 @@ h6 {
   width: 100%;
 }
 
-.row--cta {
+.cta {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -971,17 +985,18 @@ h6 {
   border-radius: 50%;
   background-color: var(--background-color);
   overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .review-card__name {
   font-size: 22px;
   font-family: "Outfit", sans-serif;
   color: #2D3958;
-  margin-top: 10px;
+  padding-bottom: 5px;
 }
 
 .review-card__job {
-  margin-top: 5px;
+  padding-bottom: 20px;
 }
 
 .review-card__rate {
@@ -989,17 +1004,16 @@ h6 {
   align-items: center;
   color: #F9E492;
   gap: 6px;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .review-card__comment {
   font-size: 18px;
   text-align: center;
   letter-spacing: -0.3px;
-  margin-top: 30px;
 }
 
-.row--footer {
+.footer {
   padding-bottom: 100px;
 }
 
@@ -1010,9 +1024,8 @@ h6 {
 }
 
 .footer-col__title {
-  font-size: 22px;
-  font-family: "Outfit", sans-serif;
   color: #FFFFFF;
+  font-weight: 400;
 }
 
 .footer-col__item {

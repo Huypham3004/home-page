@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 100px;
 }
 
 .choose-button {
@@ -43,10 +44,6 @@
     border-radius: 5px;
 }
 
-.row--pricing {
-    margin-top: 100px;
-}
-
 .pricing-detail {
     display: flex;
     flex-direction: column;
@@ -54,6 +51,7 @@
     border: 1px solid #E7E5EA;
     border-radius: 10px;
     background-color: #FFFFFF;
+    padding-top: 35px;
 }
 
 .pricing-detail__type {
@@ -61,6 +59,7 @@
     font-weight: 500;
     font-family: $fontPrimary;
     color: #4F77FF;
+    padding-bottom: 20px;
 }
 
 .pricing-detail__price {
@@ -68,6 +67,7 @@
     font-weight: 500;
     font-family: $fontPrimary;
     color: #2D3958;
+    padding-bottom: 10px;
 
     span {
         font-size: 64px;
@@ -75,32 +75,38 @@
 }
 
 .pricing-detail__description {
-    width: 56%;
+    width: 52%;
     text-align: center;
+    padding-bottom: 40px;
 }
 
-.pricing-detail__items {
+.list-item {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 40px;
+    list-style: none;
 }
 
-.item {
+.list-item__item {
+
     display: flex;
     align-items: center;
     gap: 13px;
-}
 
-.item__icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(237, 241, 255);
-    color: #4F77FF;
+    &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f00c";
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+        border-radius: 50%;
+        background-color: rgb(237, 241, 255);
+        color: #4F77FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .pricing-detail__button {

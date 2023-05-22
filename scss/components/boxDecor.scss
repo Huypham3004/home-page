@@ -1,6 +1,7 @@
 .box-decor {
     position: relative;
     --position: calc((var(--size) + 10px) * -1);
+    width: var(--width);
 
     &:after {
         content: '';
@@ -29,7 +30,7 @@
 
 .box-decor--top-left {
     &:after {
-        top: 0;
+        top: 30px;
         left: var(--position);
         border-radius: 50% 50% 0 50%;
     }
@@ -37,7 +38,7 @@
 
 .box-decor--top-right {
     &:after {
-        top: 0;
+        top: 30px;
         right: var(--position);
         border-radius: 50% 50% 50% 0;
     }

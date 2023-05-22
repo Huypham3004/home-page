@@ -1,12 +1,11 @@
 .page-section {
     width: 100%;
-    margin-top: 120px;
     position: relative;
 }
 
 .page-section--bg {
     background-color: $backgroundColor1;
-    z-index: -2;
+    // z-index: -2;
 }
 
 .page-section--bg-black {

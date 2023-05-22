@@ -1,0 +1,17 @@
+.text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.text-box__title {
+    font-family: $fontPrimary;
+    font-size: 22px;
+    letter-spacing: -1px;
+    color: #120F1F;
+}
+
+.text-box__description {
+    text-align: center;
+}
